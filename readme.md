@@ -38,8 +38,8 @@ This application offers the ability to create, read, update and delete products,
   
 -Create the ecommerce_db schema using workbench (or your preferred method to perform this action);<br>
 -Use the command line: "npm run seeds";<br>
--To run the automated test using node.js, please use the command line: "npm run test"<br>
 -To run the application, please run the command line: "npm install" or "npm i" followed by the command "npm start"<br>
+-To run the built-in automated test using node.js, please use the command line: "npm run test". Note that this command needs to be executed in a second terminal, after starting the server using "npm start".<br>
 
 
  

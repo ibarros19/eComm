@@ -53,6 +53,10 @@ This application offers the ability to create, read, update and delete products,
 <tr>
 <td><img src="img/screenshot3.png" target="blank" width=400px></td>
 </tr>
+<tr>
+<td><img src="img/screenshot4.png" target="blank" width=400px></td>
+<tr>
+<td><img src="img/screenshot5.png" target="blank" width=400px></td>
 </tr>
 </table>
 <br>
@@ -63,7 +67,7 @@ This application offers the ability to create, read, update and delete products,
 
 GitHub Repository-> <a href="https://github.com/ibarros19/eComm" target="_blank">LINK</a> 
 <br>
-Video Demo-> <a href="https://" target="_blank">LINK</a> 
+Video Demo-> <a href="https://youtu.be/t01BqRAGf8w" target="_blank">LINK</a> 
 <a name='questions'></a>
 
 ## Questions

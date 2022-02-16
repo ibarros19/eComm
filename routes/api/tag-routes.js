@@ -29,9 +29,9 @@ router.get('/:id', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     try {
-        let name = req.body.name;
+        let tag_name = req.body.tag_name;
         const tag = await Tag.findOrCreate({
-            where: { name: name }
+            where: { tag_name }
         });
         res.send({ created: tag[0] });
     }
@@ -43,9 +43,9 @@ router.post('/', async (req, res, next) => {
 router.put('/:id', async (req, res, next) => {
     try {
         let id = req.params.id;
-        let name = req.body.name;
+        let tag_name = req.body.tag_name;
         let tag = await Tag.findByPk(id);
-        tag.name = name;
+        tag.tag_name = tag_name;
         if (tag instanceof Tag){
             tag.save();
         }

@@ -6,11 +6,11 @@ describe('Tags', () => {
   var tag_id
 
   it('Create a tag', async () => {
-    const res = await api.post('tags', { name: 'mobile' })
+    const res = await api.post('tags', { tag_name: 'mobile' })
     assert.equal(res.status, 200)
     assert.ok(res.data.created)
     assert.ok(res.data.created.id)
-    assert.equal(res.data.created.name, 'mobile')
+    assert.equal(res.data.created.tag_name, 'mobile')
     tag_id = res.data.created.id
   })
 
@@ -19,7 +19,7 @@ describe('Tags', () => {
     assert.equal(res.status, 200)
     assert.ok(res.data.data)
     assert.ok(res.data.data.id)
-    assert.equal(res.data.data.name, 'mobile')
+    assert.equal(res.data.data.tag_name, 'mobile')
   })
 
   it('Get the tag list', async () => {
@@ -28,16 +28,16 @@ describe('Tags', () => {
     assert.ok(res.data.tags)
     assert.ok(Array.isArray(res.data.tags))
     assert.ok(res.data.tags.length > 0)
-    assert.ok(res.data.tags.find(x => x.name === 'mobile'))
+    assert.ok(res.data.tags.find(x => x.tag_name === 'mobile'))
   })
 
   it('Update a tag', async () => {
-    const res = await api.put('tags/' + tag_id, { name: 'mobileX' })
+    const res = await api.put('tags/' + tag_id, { tag_name: 'mobileX' })
     assert.equal(res.status, 200)
     assert.ok(res.data.tag)
     assert.ok(res.data.tag.id)
     assert.equal(res.data.tag.id, tag_id)
-    assert.equal(res.data.tag.name, 'mobileX')
+    assert.equal(res.data.tag.tag_name, 'mobileX')
   })
 
   it('Delete a tag', async () => {

@@ -7,7 +7,7 @@ describe('Products', () => {
   var tag_id
 
   it('Create a product', async () => {
-    const resTag = await api.post('tags', { name: 'iPhone' })
+    const resTag = await api.post('tags', { tag_name: 'iPhone' })
     tag_id = resTag.data.created.id
   
     const resCategory = await api.post('categories', { category_name: 'iPhone Pro' })
@@ -44,7 +44,7 @@ describe('Products', () => {
     assert.ok(res.data.data.id)
     assert.ok(res.data.data.tags)
     assert.equal(res.data.data.tags.length, 1)
-    assert.equal(res.data.data.tags[0].name, 'iPhone')
+    assert.equal(res.data.data.tags[0].tag_name, 'iPhone')
   })
 
   it('Get the product list', async () => {

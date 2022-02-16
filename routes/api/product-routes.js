@@ -82,8 +82,6 @@ router.put('/:id', async (req, res, next) => {
                 .filter(({ tag_id }) => !req.body.tags.includes(tag_id))
                 .map(({ id }) => id);
 
-                console.log('productTagsToRemove', productTagsToRemove);
-    
             const updatedProductTags = await Promise.all([
                 ProductTag.destroy({ where: { id: productTagsToRemove } }),
                 ProductTag.bulkCreate(newProductTags),
